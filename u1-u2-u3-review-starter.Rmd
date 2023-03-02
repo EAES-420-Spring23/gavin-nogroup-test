@@ -22,17 +22,28 @@ solubility_hardness <- read_csv("data/solubility_hardness.csv")
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r inspect-sand-minerals}
+glimpse(sites)
+names(sites)
+```
+
+There are 23 rows and 2 variables.
+Each row corresponds to an individual mineral grain.
+
 
 ### Exercise 2
 
-Remove this text, and add your answer for Exercise 2 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r inspect-other-data-frames}
+glimpse(density)
+glimpse(solubility_hardness)
+glimpse(location_descriptions)
+names(density)
+names(solubility_hardness)
+names(location_descriptions)
+```
+Density contains 3 rows and 2 columns; each row is a mineral density value for 3 minerals.
+solubility_hardness contains 3 rows and 3 columns; each row is a hardness and solubility value for 3 minerals.
+location_descriptions contains 10 rows and 2 columns; each row is a location description for 10 different mineral samples.
 
 ### Exercise 3
 
