@@ -47,17 +47,28 @@ location_descriptions contains 10 rows and 2 columns; each row is a location des
 
 ### Exercise 3
 
-Remove this text, and add your answer for Exercise 3 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r join-mineral-properties}
+sand_mineral_density <- sites %>% 
+  left_join(density)
+```
+
+```{r}
+sand_mineral_properties <- sand_mineral_density %>% 
+  left_join(solubility_hardness)
+```
+
 
 ### Exercise 4
 
-Remove this text, and add your answer for Exercise 4 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r}
+sand_mineral_properties %>% 
+  count(location)
+
+sand_mineral_properties %>% 
+  group_by(location) %>% 
+  summarize(count = n())
+```
+
 
 ### Exercise 5
 
